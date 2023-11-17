@@ -20,8 +20,18 @@ int Calc(string znak, int num1, int num2){
     }
 }
 
+bool tests(){
+    if(Calc("+", 1, 2) != 3) return false;
+    if(Calc("*", 3, 3) != 9) return false;
+    return true;
+}
+
 int main() {
     setlocale(LC_ALL, "Russian");
+    if(tests() == true){
+        cout << "Все тесты пройдены!" << endl;
+    }
+    else cout << "Тесты завершились неудачно" << endl;
     printf("Калькулятор запущен!\n");
     while(true){
         int num1, num2;
